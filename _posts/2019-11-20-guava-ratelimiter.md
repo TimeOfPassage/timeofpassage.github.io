@@ -18,14 +18,14 @@
 
 **TIPS: 令牌桶(Token Bucket)算法优势在于方便的改变速度，提高速率**
 
-![image-20191120175328920](..\static\image\20191120\image-20191120175328920.png)
+![image-20191120175328920](https://timeofpassage.github.io/static\image\20191120\image-20191120175328920.png)
 
 ```java
 public static RateLimiter create(double permitsPerSecond)
 public static RateLimiter create(double permitsPerSecond, long warmupPeriod, TimeUnit unit)
 ```
 
-![image-20191120175442360](..\static\image\20191120\image-20191120175442360.png)
+![image-20191120175442360](https://timeofpassage.github.io/static\image\20191120\image-20191120175442360.png)
 
 ```java
 RateLimiter rateLimiter = RateLimiter.create(2); (1)

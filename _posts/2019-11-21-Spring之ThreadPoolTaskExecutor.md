@@ -23,7 +23,7 @@
 
 Spring对ThreadPoolExecutor封装的参数(Ioc注入):
 
-![image-20191121095158954](..\static\image\20191121\image-20191121095158954.png)
+![image-20191121095158954](https://timeofpassage.github.io/static\image\20191121\image-20191121095158954.png)
 
 1. 字段解释：
 
@@ -57,7 +57,7 @@ Spring对ThreadPoolExecutor封装的参数(Ioc注入):
 
    ​                      
 
-![image-20191121101843819](..\static\image\20191121\image-20191121101843819.png)
+![image-20191121101843819](https://timeofpassage.github.io/static\image\20191121\image-20191121101843819.png)
 
 #### 初始化源码分析
 
@@ -126,7 +126,7 @@ public static void main(String[] args) {
 
 Console Output
 
-![image-20191121103612907](..\static\image\20191121\image-20191121103612907.png)
+![image-20191121103612907](https://timeofpassage.github.io/static\image\20191121\image-20191121103612907.png)
 
 
 
@@ -158,4 +158,4 @@ Console Output
 
    Console Output:
 
-   ![image-20191121104732282](..\static\image\20191121\image-20191121104732282.png)
+   ![image-20191121104732282](https://timeofpassage.github.io/static\image\20191121\image-20191121104732282.png)
