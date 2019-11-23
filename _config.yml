@@ -80,7 +80,7 @@ netease_comment: false
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "命运之花绽放，奏响一曲凯旋之歌"
 #头像
-#sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-hxe.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
