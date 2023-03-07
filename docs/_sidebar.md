@@ -20,6 +20,7 @@
   - [日志logback使用](/articles/backend/日志logback使用.md)
   - [算法-狄杰斯特拉算法](/articles/backend/算法-狄杰斯特拉算法.md)
   - [编程-二进制按位与或异或运算](/articles/backend/编程-二进制按位与或异或运算.md)
+  - [轻量日志引用](/articles/backend/轻量日志引用.md)
 - 自由前端
 
   - [CodeMirror使用说明](/articles/frontend/CodeMirror使用说明.md)
