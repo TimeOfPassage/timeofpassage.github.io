@@ -52,6 +52,7 @@
 - 他喵的算法
 
   - [二分查找](/articles/algorithm/二分查找.md)
+  - [Snowflake](/articles/algorithm/雪花算法.md)
 - 操作系统啊
 
   - [CentOS之SSH超时无响应处理](/articles/os/CentOS之SSH超时无响应处理.md)
