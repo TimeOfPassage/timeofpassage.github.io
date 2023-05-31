@@ -250,66 +250,74 @@ public HashMap(int initialCapacity, float loadFactor) {
 
 **实现源码(优化过后的、基于jdk1.8)**
 
+> **按位& (n应为2的倍数)**
+>
+> i = (n - 1) & hash  ==> hash所属范围[0, n-1]
+>
+> **为什么链表转树结构阈值是8，参考泊松分布(对随机数建模分析)**
+
 ```java
 public V put(K key, V value) {
   return putVal(hash(key), key, value, false, true);
 }
-final V putVal(int hash, K key, V value, boolean onlyIfAbsent,boolean evict) {
-  Node<K,V>[] tab;
-  Node<K,V> p;
-  int n, i;
-  // 表进行扩容并返回表长度
-  if ((tab = table) == null || (n = tab.length) == 0) {
-    tab = resize();
-    n = tab.length;
-  }
-  i = (n - 1) & hash;
-  p = tab[i];
-  if (p == null) {
-    // 构造新节点加入
-    tab[i] = newNode(hash, key, value, null);
-  } else {
-    Node<K,V> e; K k;
-    if (p.hash == hash && ((k = p.key) == key || (key != null && key.equals(k)))) {
-      e = p;
-    } else if (p instanceof TreeNode) {
-      e = ((TreeNode<K, V>) p).putTreeVal(this, tab, hash, key, value);
-    } else {
-      for (int binCount = 0; ; ++binCount) {
-        e = p.next
-          if (e == null) {
-            p.next = newNode(hash, key, value, null);
-            // 当多个key最终hash结果一致的时候，这种现象称为hash碰撞，
-            // 此时相同的hash对应的元素是链表结构
-            // 数量大于8,则链表转换成红黑树
-            if (binCount >= TREEIFY_THRESHOLD - 1) { // -1 for 1st
-              treeifyBin(tab, hash);
+final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
+    Node<K,V>[] tab = table; // 存储Node的数组 
+    Node<K,V> p; 
+    int n = tab.length; // length is always a power of two(2的倍数)
+    int i;
+    if (tab == null || n == 0) // 如果非法初始化，则纠正
+        tab = resize();
+    n = tab.length; 
+    i = (n - 1) & hash // 确保得出来的i在数组合法长度内
+        p = tab[i] // 获取hash对应位置节点
+        if (p == null) // 如果为空，则表示数组内没有对应节点，则新增节点
+            tab[i] = newNode(hash, key, value, null);
+    else {
+        // 不为空，说明存在hash碰撞情况，则要分情况考虑
+        Node<K,V> e; 
+        K k = p.key;
+        if (p.hash == hash && (k == key || (key != null && key.equals(k))))  // hash一致，并且key一致， 则节点一致，直接覆盖更新
+            e = p;
+        else if (p instanceof TreeNode) 
+            // 如果取出来的节点是tree节点，则直接往tree里添加，因为hash碰撞后，会以链表存储，如果超过一定阈值，
+            // 则会将链表转变成红黑树结构
+            e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
+        else {
+            // 往链表里添加新节点, binCount属于[0,TREEIFY_THRESHOLD-1] ===> [0,7]， 所以链表长度为8
+            // 为什么为8呢？参考泊松分布... 
+            for (int binCount = 0; ; ++binCount) {
+                e = p.next // 获取当前节点下一个节点，判断下一个节点是否可以存储  
+                    if (e == null) { // 如果下一个节点为空，则表示有可能可以存储
+                        p.next = newNode(hash, key, value, null);
+
+                        // 当时如果binCount超过阈值，这里可以变相的理解（数组+链表+红黑树）中链表部分长度为8
+                        // 超过阈值8，则转换为空红黑树存储
+                        if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st  TREEIFY_THRESHOLD=8
+                            treeifyBin(tab, hash);  // 链表转红黑树
+                        break;
+                    }
+                // 如果不为空，则再次判断链表上是否存在相同hash，如果有则表明已经存储过，则不存储
+                k = e.key
+                    if (e.hash == hash && (k == key || (key != null && key.equals(k))))
+                        break;
+                // 如果没有，则获取下一个节点node
+                p = e;
             }
-            break;
-          }
-        if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k)))) {
-          break;
         }
-        p = e;
-      }
+        // 如果e不为空，如果没有特殊设定，且旧值为空的情况下，则更新节点数据
+        if (e != null) { // existing mapping for key
+            V oldValue = e.value;
+            if (!onlyIfAbsent || oldValue == null)
+                e.value = value;
+            afterNodeAccess(e); // 后置操作，hashmap中为空实现
+            return oldValue;
+        }
     }
-    if (e != null) { // existing mapping for key
-      // 存在相同的key，变更对应的value
-      V oldValue = e.value;
-      if (!onlyIfAbsent || oldValue == null) {
-        e.value = value;
-      }
-      afterNodeAccess(e);
-      return oldValue;
-    }
-  }
-  ++modCount;
-  // 判断添加元素后是否达到阈值，如果达到阈值则进行扩容
-  if (++size > threshold) {
-    resize();
-  }
-  afterNodeInsertion(evict);
-  return null;
+    ++modCount; // 表示map操作次数, 并发情况下会有问题，抛出异常
+    if (++size > threshold) // 判断是否需要扩容
+        resize();
+    afterNodeInsertion(evict); // 后置操作，hashmap中为空实现
+    return null;
 }
 ```
 
@@ -320,28 +328,31 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,boolean evict) {
 ```java
 public V get(Object key) {
   Node<K,V> e;
-  e = getNode(hash(key), key)
+  e = getNode(hash(key), key)  
+  // 不为空，表明此时是数组存储，没有形成链，直接返回节点信息
   return e == null ? null : e.value;
 }
+// 链上获取节点+树上获取节点
 final Node<K,V> getNode(int hash, Object key) {
   Node<K,V>[] tab; 
   Node<K,V> first, e; 
   int n; K k;
   tab = table;
   n = tab.length;
-  first = tab[(n - 1) & hash];
+  first = tab[(n - 1) & hash]; // hash即是数组下标，hash根据key计算出来的
   if (tab != null && n > 0 && first != null) {
-    // always check first node
+    // 判断节点是否存在（这里用first表示，其实是表示链表的第一个节点）
     if (first.hash == hash && ((k = first.key) == key || (key != null && key.equals(k)))) {
       return first;
     }
+    // 获取链表的下一个节点
     e = first.next;
     if (e != null) {
-      // 如果是红黑树，直接通过getTreeNode获取对应元素值
+      // 如果节点是treeNode，表明已经转换成红黑树了；如果是红黑树，直接通过getTreeNode获取对应元素值
       if (first instanceof TreeNode) {
         return ((TreeNode<K,V>)first).getTreeNode(hash, key);
       }
-      // 不是红黑树，是链表直接循环遍历
+      // 如果不是红黑树，是链表直接循环遍历查找
       do {
         if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k)))) {
           return e;
