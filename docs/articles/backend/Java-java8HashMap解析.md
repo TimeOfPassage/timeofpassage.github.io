@@ -364,3 +364,78 @@ final Node<K,V> getNode(int hash, Object key) {
 }
 ```
 
+**ConcurrentHashMap中put部分源码释义(源码经部分结构改动，便于可读性)**
+
+```java
+final V putVal(K key, V value, boolean onlyIfAbsent) {
+	if (key == null || value == null) throw new NullPointerException();
+	// 计算hash ==> (h ^ (h >>> 16)) & 0x7fffffff
+	// 无符号右移16位，高位全部变成0；按位异或增加随机性；与0x7fffffff进行按位&，确保取最后31位信息
+	int hash = spread(key.hashCode()); 
+	int binCount = 0;
+	// 循环数组
+	for (Node<K,V>[] tab = table;;) {
+		Node<K,V> f; 
+		int n = tab.length, i, fh;
+		if (tab == null || n == 0) // 兜底初始化数组
+			tab = initTable();
+		i = (n - 1) & hash // 确保i的范围在[0,n-1]之中，不会越界 
+		f = tabAt(tab, i) // 从数组 tab 获取元素, 线程安全的
+		else if (f == null) {
+			// 通过Unsafe的compareAndSwapObject方法将k，v写入内存中(无锁化添加)
+			if (casTabAt(tab, i, null, new Node<K,V>(hash, key, value, null)))
+				break;                   // no lock when adding to empty bin
+		}
+		else if ((fh = f.hash) == MOVED) // 当前获取的node移动了，则重新设置tab
+			tab = helpTransfer(tab, f);
+		else {
+			V oldVal = null;
+			synchronized (f) { // 对当前对象加锁（对象锁）
+				if (tabAt(tab, i) == f) { // 获取第i个元素，判断是否==f， 类似于 double check
+					if (fh >= 0) { // 重新获取tab数组后操作
+						binCount = 1;
+						for (Node<K,V> e = f;; ++binCount) {
+							K ek = e.key;
+							if (e.hash == hash && (ek == key || (ek != null && key.equals(ek)))) {
+								oldVal = e.val;
+								if (!onlyIfAbsent)
+									e.val = value;
+								break;
+							}
+							Node<K,V> pred = e = e.next;
+							if (e == null) {
+								pred.next = new Node<K,V>(hash, key, value, null);
+								break;
+							}
+						}
+					}
+					else if (f instanceof TreeBin) { // 如果节点返回的tree
+						Node<K,V> p;
+						binCount = 2;
+						p = ((TreeBin<K,V>)f
+						// 放进对应的tree里 
+						// putTreeVal ==> Returns: null if added， 所以添加的时候不会进if语句
+						if (p.putTreeVal(hash, key,value)) != null) { 
+							oldVal = p.val;
+							if (!onlyIfAbsent)
+								p.val = value;
+						}
+					}
+				}
+			}
+			// 根据binCount判断是否超阈值，超出则转换红黑树, 转换之后如果存在值则返回，否则结束循环
+			if (binCount != 0) {
+				if (binCount >= TREEIFY_THRESHOLD)
+					treeifyBin(tab, i); // 红黑树转换
+				if (oldVal != null)
+					return oldVal;
+				break;
+			}
+		}
+	}
+	// 增加数量，如果容量不够也需要扩容(线程安全)
+	addCount(1L, binCount);
+	return null;
+}
+```
+
