@@ -1,105 +1,18 @@
-# Flutter-综合案例
+# #Flutter案例经验
 
-## 环境设置
+# 使用 PageView 制作底部导航
 
-```shell
-#Flutter
-FLUTTER_HOME=/Users/heyang/Documents/software-info/flutter
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+新建五个页面
 
-export PATH="$FLUTTER_HOME/bin:$PATH"
-```
+​`one_page.dart`​,
 
-## 单例实现
+​`two_page.dart`​,
 
-```dart
-/// 懒汉式
-class Singleton {
-  static Singleton _instance;
+​`three_page.dart`​,
 
-  Singleton._internal() {
-    _instance = this;
-  }
+​`four_page.dart`​,
 
-  factory Singleton() => _instance ?? Singleton._internal();
-}
-
-/// 饿汉式
-class Singleton {
-  Singleton._internal();
-  
-  factory Singleton() => _instance;
-  
-  static late final Singleton _instance = Singleton._internal();
-}
-```
-
-## 核心组件MaterialApp&Scaffold
-
-```dart
-// 应用脚手架
-const MaterialApp({
-  Key key,
-  this.navigatorKey, // 可以定义全局key，避免子组建需要context信息
-  this.home, // 主界面的内容 widget
-  this.routes = const <String, WidgetBuilder>{}, // 带 router 和路由跳转有关
-  this.initialRoute, // 初始化路由，当配置onGenerateRoute，则不需要配置此项
-  this.onGenerateRoute, // 路由生成
-  this.onUnknownRoute, // 404路由
-  this.navigatorObservers = const <NavigatorObserver>[], 
-  this.builder,
-  this.title = '', // *类似标题
-  this.onGenerateTitle, // 主要用于多语言情况下，需要根据当前语言替换 title，需要使用该值
-  this.color, // 主题色，如果该值未设置，取 theme.primaryColor,未设置 theme 则取蓝色
-  this.theme, // App 的主题风格，包括主题色，按钮默认颜色等等
-  this.locale, // 带 locale 的和多语言适配相关
-  this.localizationsDelegates,
-  this.localeListResolutionCallback,
-  this.localeResolutionCallback,
-  this.supportedLocales = const <Locale>[Locale('en', 'US')], // 支持语言设置
-  this.debugShowMaterialGrid = false, 
-  this.showPerformanceOverlay = false, // 显示性能浮层
-  this.checkerboardRasterCacheImages = false,
-  this.checkerboardOffscreenLayers = false,
-  this.showSemanticsDebugger = false,
-  this.debugShowCheckedModeBanner = true, // debug 模式下，是否显示 DEBUG 标示横幅
-})
-
-// Scaffold 页面脚手架
-const Scaffold({
-  Key key,
-  this.appBar, // 界面顶部的那条栏，这边需要返回一个 AppBar 实例
-  this.body, // 界面的内容部分
-  this.floatingActionButton, // 悬浮部分，可以通过 floatingActionButtonLocation 设置位置
-  this.floatingActionButtonLocation,
-  this.floatingActionButtonAnimator,
-  this.persistentFooterButtons,
-  this.drawer, // 侧滑抽屉部分，从左侧滑出(应该和语言有关，和文字方向同向)
-  this.endDrawer, // 侧滑抽屉部分，从右侧滑出
-  this.bottomNavigationBar, // 底部导航栏，就是通常看到的底部 TAB 切换部件
-  this.bottomSheet, // 展示从底部弹出的，起到提示作用的，通过 showModalBottomSheet 展示
-  this.backgroundColor, // 界面的背景色
-  this.resizeToAvoidBottomPadding = true, // 避免 body 被底部弹出部件填充，例如输入法键盘
-  this.primary = true, // 当前的 Scaffold 是否需要被展示在屏幕最上层
-})
-```
-
-## 应用实例
-
-### 使用PageView制作底部导航
-
- 新建五个页面
-
-`one_page.dart`,
-
-`two_page.dart`,
-
-`three_page.dart`,
-
-`four_page.dart`,
-
-`five_page.dart`
+​`five_page.dart`​
 
 每个页面内容如下
 
@@ -121,10 +34,9 @@ class _OnePageState extends State<OnePage> {
     );
   }
 }
-
 ```
 
-主页面code
+主页面 code
 
 ```dart
 import 'package:flutter/material.dart';
@@ -268,30 +180,23 @@ theme: ThemeData(
 ),
 ```
 
-
-
 最终效果
 
-<img src="../../_media/image/20210822/2.png" alt="image-20210822155705686" style="zoom:40%;" />     
-<img src="../../_media/image/20210822/3.png" alt="simulator_screenshot_57435075-AF8F-4732-9247-B2782D68FAC2" style="zoom:40%;" />
+​ ​​![2-1](assets/2-1-20230930221950-whlal7c.png)​![3](assets/3-20230930221954-dj2ac14.png)​​
 
+# 引入阿里 iconfont 图标
 
+在 iconfont 选择图标下载
 
+iconfont 网址：[https://www.iconfont.cn/](https://www.iconfont.cn/)
 
-
-### 引入阿里iconfont图标
-
-在iconfont选择图标下载
-
-iconfont网址：https://www.iconfont.cn/
-
-![image-20210822161311239](../../_media/image/20210822/4.png)
+​​![4](assets/4-20230930222019-yf1ergf.png)​​
 
 解压下载文件
 
-将文件中的**iconfont.ttf**文件复制到工程目录下`lib/assets/icons/',如果没有则新建
+将文件中的 **iconfont.ttf** 文件复制到工程目录下 `lib/assets/icons/`​,如果没有则新建
 
-![image-20210822161452531](../../_media/image/20210822/5.png)
+​​![5](assets/5-20230930222031-znygcf2.png)​​
 
 修改上节代码
 
@@ -308,13 +213,11 @@ List bottomBarConfigs = [
 
 运行看结果
 
-<img src="../../_media/image/20210822/6.png" alt="simulator_screenshot_24100777-B643-45B5-8A0E-B84987CF48BB" style="zoom:40%;" />        <img src="../../_media/image/20210822/7.png" alt="simulator_screenshot_20DDBAE0-EAD6-49F3-B796-30737B51C320" style="zoom:40%;" />
+ ![6](assets/6-20230930222049-vekc682.png)   ![7](assets/7-20230930222049-83tp2lv.png)​
 
+# 轮播图实现
 
-
-### 轮播图实现
-
-引入plugin
+引入 plugin
 
 ```yaml
 dependencies:
@@ -323,7 +226,7 @@ dependencies:
   flutter_swiper_null_safety: ^1.0.2  # 支持空安全的轮播图插件 https://github.com/best-flutter/flutter_swiper
 ```
 
-TwoPage增加代码
+TwoPage 增加代码
 
 ```dart
 import 'package:flutter/material.dart';
@@ -376,33 +279,33 @@ class _TwoPageState extends State<TwoPage> {
 
 轮播图运行效果
 
-<img src="../../_media/image/20210822/8.png" alt="simulator_screenshot_8C1FD9CD-A7E0-4C87-B052-A00A2EA33356" style="height:500px;" />
+​![8](assets/8-20230930222133-5kb4rux.png)​
 
 轮播插件具体属性
 
-| 参数            | 默认值                         | 描述                                             |
-| --------------- | ------------------------------ | ------------------------------------------------ |
-| scrollDirection | Axis.horizontal                | 滚动方向，设置为Axis.vertical如果需要垂直滚动    |
-| loop            | true                           | 无限轮播模式开关                                 |
-| index           | 0                              | 初始的时候下标位置                               |
-| autoplay        | false                          | 自动播放开关.                                    |
-| onIndexChanged  | void onIndexChanged(int index) | 当用户手动拖拽或者自动播放引起下标改变的时候调用 |
-| onTap           | void onTap(int index)          | 当用户点击某个轮播的时候调用                     |
-| duration        | 300.0                          | 动画时间，单位是毫秒                             |
-| pagination      | null                           | 设置 `new SwiperPagination()` 展示默认分页指示器 |
-| control         | null                           | 设置 `new SwiperControl()` 展示默认分页按钮      |
+|参数|默认值|描述|
+| ---------------| ------------------------------| ------------------------------------------------|
+|scrollDirection|Axis.horizontal|滚动方向，设置为 Axis.vertical 如果需要垂直滚动|
+|loop|true|无限轮播模式开关|
+|index|0|初始的时候下标位置|
+|autoplay|false|自动播放开关.|
+|onIndexChanged|void onIndexChanged(int index)|当用户手动拖拽或者自动播放引起下标改变的时候调用|
+|onTap|void onTap(int index)|当用户点击某个轮播的时候调用|
+|duration|300.0|动画时间，单位是毫秒|
+|pagination|null|设置 `new SwiperPagination()`​ 展示默认分页指示器|
+|control|null|设置 `new SwiperControl()`​ 展示默认分页按钮|
 
 分页指示器
 
-分页指示器继承自 `SwiperPlugin`,`SwiperPlugin` 为 `Swiper` 提供额外的界面.设置为`new SwiperPagination()` 展示默认分页.
+分页指示器继承自 `SwiperPlugin`​,`SwiperPlugin`​ 为 `Swiper`​ 提供额外的界面.设置为 `new SwiperPagination()`​ 展示默认分页.
 
-| 参数      | 默认值                     | 描述                                                         |
-| --------- | -------------------------- | ------------------------------------------------------------ |
-| alignment | Alignment.bottomCenter     | 如果要将分页指示器放到其他位置，那么可以修改这个参数         |
-| margin    | const EdgeInsets.all(10.0) | 分页指示器与容器边框的距离                                   |
-| builder   | SwiperPagination.dots      | 目前已经定义了两个默认的分页指示器样式： `SwiperPagination.dots` 、 `SwiperPagination.fraction`，都可以做进一步的自定义. |
+|参数|默认值|描述|
+| ---------| --------------------------| --------------------------------------------------------------------------|
+|alignment|Alignment.bottomCenter|如果要将分页指示器放到其他位置，那么可以修改这个参数|
+|margin|const EdgeInsets.all(10.0)|分页指示器与容器边框的距离|
+|builder|SwiperPagination.dots|目前已经定义了两个默认的分页指示器样式： `SwiperPagination.dots`​ 、 `SwiperPagination.fraction`​，都可以做进一步的自定义.|
 
-### 实现渐变头部
+# 实现渐变头部
 
 增加部分代码让页面可滚动
 
@@ -427,7 +330,7 @@ Widget build(BuildContext context) {
 
 去除顶部空白
 
-此时运行，会发现头部有空白区域填充，这是因为flutter设计的时候默认针对ListView组建有padding操作，即状态栏等高度，可以通过MediaQuery去除顶部高度
+此时运行，会发现头部有空白区域填充，这是因为 flutter 设计的时候默认针对 ListView 组建有 padding 操作，即状态栏等高度，可以通过 MediaQuery 去除顶部高度
 
 ```dart
 @override
@@ -452,11 +355,11 @@ Widget build(BuildContext context) {
 }
 ```
 
-使用Stack布局
+使用 Stack 布局
 
-使用Stack组建布局，同时抽取下内容区域布局code
+使用 Stack 组建布局，同时抽取下内容区域布局 code
 
-**Stack布局：下面的组建会出现在上层**
+**Stack 布局：下面的组建会出现在上层**
 
 ```dart
 @override
@@ -490,7 +393,7 @@ MediaQuery _buildContent(BuildContext context) {
 }
 ```
 
-新增Opacity组件包裹AppBar
+新增 Opacity 组件包裹 AppBar
 
 ```dart
  // 顶部AppBar区域透明度
@@ -528,7 +431,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-监听NotificationListener
+监听 NotificationListener
 
 ```dart
 MediaQuery _buildContent(BuildContext context) {
@@ -588,7 +491,7 @@ void _onScroll(offset) {
 }
 ```
 
-至此滚动渐变appbar实现，完整代码
+至此滚动渐变 appbar 实现，完整代码
 
 ```dart
 import 'package:flutter/material.dart';
@@ -708,17 +611,17 @@ class _TwoPageState extends State<TwoPage> {
 }
 ```
 
-渐变AppBar运行效果
+渐变 AppBar 运行效果
 
 如果视频无法播放，右击鼠标 》显示控件，点击播放
 
-<video autoplay='false' controls src="../../_media/video/20210822/9.mov"></video>
+<video controls="controls" src="assets/9-20231002010643-76wzp6l.mov" data-src="assets/9-20231002010643-76wzp6l.mov"></video>
 
-### 代码生成Model
+# 代码生成 Model
 
 导入依赖
 
-在`dev_dependencies`标签下增加**json_serializable**和**build_runner**依赖
+在 `dev_dependencies` ​标签下增加 **json_serializable** 和 **build_runner** 依赖
 
 ```yaml
 dev_dependencies:
@@ -728,37 +631,37 @@ dev_dependencies:
   build_runner: ^2.0.0
 ```
 
-根据json生成通用实体
+根据 json 生成通用实体
 
-​	打开网址：https://caijinglong.github.io/json2dart/index.html
+ 打开网址：[https://caijinglong.github.io/json2dart/index.html](https://caijinglong.github.io/json2dart/index.html)
 
-![image-20210823222927995](../../_media/image/20210823/1.png)
+​![1](assets/1-20230930222337-6hx78ou.png)​
 
-执行命令生成.g文件
+执行命令生成.g 文件
 
-将上述生成的model文件拷贝到工程目录，新建dart文件保存，此时报错不用处理，进入项目根目录，执行如下命令
+将上述生成的 model 文件拷贝到工程目录，新建 dart 文件保存，此时报错不用处理，进入项目根目录，执行如下命令
 
-```bash
+```shell
 flutter packages pub run build_runner build
 ```
 
-![image-20210823223136049](../../_media/image/20210823/2.png)
+​![2](assets/2-20230930222351-uz90y9m.png)​​​
 
 使用如下命令监视项目文件改动
 
-```bash
+```shell
 flutter packages pub run build_runner watch
 ```
 
 如果无法生成，使用如下命令删除
 
-```bash
+```shell
 flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 
-ThreePage页面代码使用实例
+ThreePage 页面代码使用实例
 
-```banner_entity.dart`
+​`banner_entity.dart`​
 
 ```dart
 import 'package:json_annotation/json_annotation.dart';
@@ -812,7 +715,7 @@ class Data extends Object {
 }
 ```
 
-`banner_entity.g.dart`
+​`banner_entity.g.dart`​
 
 ```dart
 // GENERATED CODE - DO NOT MODIFY BY HAND
@@ -855,7 +758,7 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
     };
 ```
 
-`three_page.dart`
+​`three_page.dart`​
 
 ```dart
 import 'dart:convert';
@@ -978,15 +881,15 @@ class _ThreePageState extends State<ThreePage> {
 
 运行效果
 
-![image-20210823224525757](../../_media/image/20210823/3.png)
+​​![3](assets/3-20230930222412-e17yr7o.png)​​
 
 代码结构图
 
-![image-20210823224614416](../../_media/image/20210823/4.png)
+​​![4](assets/4-20230930222416-wjvfpy5.png)​​
 
-### 处理Android异形屏启动状态栏无法全屏问题
+# 处理 Android 异形屏启动状态栏无法全屏问题
 
-1.修改ftab\android\app\src\main\res\values\styles.xml内容
+1.修改 `ftab\android\app\src\main\res\values\styles.xml` ​内容
 
 修改前内容
 
@@ -1054,8 +957,7 @@ public class MainActivity extends FlutterActivity {
 }
 ```
 
-可以重启看效果，就发现启动就是全屏启动了
-配合如下内容就可以全屏无黑色状态栏了
+可以重启看效果，就发现启动就是全屏启动了 配合如下内容就可以全屏无黑色状态栏了
 
 ```dart
 if (Platform.isAndroid) {
@@ -1066,9 +968,9 @@ if (Platform.isAndroid) {
 }
 ```
 
-### 页面状态保存处理
+# 页面状态保存处理
 
-假设在其他页面切回`home_page.dart`时需要保存页面数据(滚动位置等)，修改内容如下
+假设在其他页面切回 `home_page.dart` ​时需要保存页面数据(滚动位置等)，修改内容如下
 
 ```dart
 import 'package:flutter/material.dart';
@@ -1092,6 +994,6 @@ class _HomePageState extends State<HomePage>
 }
 ```
 
-通过混入`AutomaticKeepAliveClientMixin`实现`wantKeepAlive`函数，按条件返回`true`。
-从而保存`home_page.dart`页面状态
+通过混入 `AutomaticKeepAliveClientMixin` ​实现 `wantKeepAlive` ​函数，按条件返回 `true`​。 从而保存 `home_page.dart` ​页面状态
 
+‍

@@ -3,35 +3,130 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>写写画画乱七八槽</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/_media/logo.png" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 侧边栏样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
+  <!-- 目录跳转 -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <style>
+    .sidebar {
+      padding: 12px 0;
+    }
+
+
+    /* 目录图标样式处理 begin */
+    .sidebar-nav li {
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .sidebar-nav ul:not(.app-sub-sidebar)>li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 11px;
+      left: -12px;
+      height: 6px;
+      width: 6px;
+      border-right: 1px solid #505d6b;
+      border-bottom: 1px solid #505d6b;
+      transform: rotate(-45deg);
+      transition: transform 0.1s;
+    }
+
+    .sidebar-nav ul:not(.app-sub-sidebar)>li.open::before {
+      transform: rotate(45deg);
+    }
+
+    .sidebar-nav ul:not(.app-sub-sidebar)>li.collapse::before {
+      transform: rotate(-45deg);
+    }
+
+    /* 目录图标样式处理 end */
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">精彩内容马上就来...</div>
   <script>
+    // 参考：https://docsify.js.org/#/zh-cn/configuration
     window.$docsify = {
-      // repo: 'https://github.com/TimeOfPassage/knowledges/',
+      name: "写写画画乱七八槽",
+      // name: '<font style="font-family:"楷体","楷体_GB2312";">Mizar 随笔集</font>',
+      // 仓库地址
+      // repo: 'https://github.com/TimeOfPassage/timeofpassage.github.io/',
       // 在侧边栏中出现的网站图标，你可以使用CSS来更改大小
-      logo: '/_media/logo.png',
+      // logo: '/_media/logo.png',
       // 通过设置 coverpage 参数，可以开启渲染封面的功能
       coverpage: true,
-      // 加载自定义导航栏
-      // loadNavbar: true,
+      coverpage: '封面.md',
       // 加载自定义侧边栏
       loadSidebar: true,
-      subMaxLevel: 5,
+      loadSidebar: '目录.md',
+      // 只展开一级
+      sidebarDisplayLevel: 1,
       // 切换页面后是否自动跳转到页面顶部。
       auto2top: true,
+      // 复制插件配置, //cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制',
+      },
+      // tabs 插件配置, https://cdn.jsdelivr.net/npm/docsify-tabs@1
+      // tabs: {
+      //   persist: true,      // default
+      //   sync: true,      // default
+      //   theme: 'classic', // default
+      //   tabComments: true,      // default
+      //   tabHeadings: true       // default
+      // },
+      // 提示框
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      // 目录跳转
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6',
+        title: '概览',
+      },
+      // 搜索插件
+      // search: {
+      //   placeholder: '输入内容进行搜索',
+      // }
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+  <!-- docsify -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- 折叠插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 表情 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 图片放大 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 支持代码复制 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script> -->
+  <!-- Latest -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- 目录跳转 -->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <!-- 全文搜索插件 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <!-- 语法高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-dart.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
 </body>
 
 </html>
