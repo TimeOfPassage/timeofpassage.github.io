@@ -19,7 +19,7 @@
     }
     .scroll-to-top {
       border-radius: 90px !important;
-      line-height: 50px;
+      line-height: 50px !important;
     }
   </style>
 </head>
@@ -32,6 +32,7 @@
     window.$docsify = {
       // name: "写写画画乱七八槽",
       // name: '<font style="font-family:"楷体","楷体_GB2312";">Mizar 随笔集</font>',
+      routerMode: 'history',
       // 仓库地址
       // repo: 'https://github.com/TimeOfPassage/timeofpassage.github.io/',
       // 加载 _navbar.md
@@ -47,6 +48,7 @@
       // hideSidebar: true,
       loadSidebar: true,
       loadSidebar: 'sidebar.md',
+      subMaxLevel: 3,
       // 只展开一级
       // sidebarDisplayLevel: 1,
       // 切换页面后是否自动跳转到页面顶部。

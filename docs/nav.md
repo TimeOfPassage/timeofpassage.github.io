@@ -1,7 +1,7 @@
 
 <!-- _navbar.md -->
 
-- [计算机时代](/计算机时代/README.md)
+- 计算机时代
     - [Java世界](/计算机时代/Java世界/README.md)
     - [前端系列](/计算机时代/前端系列/README.md)
     - [Flutter冲](/计算机时代/Flutter冲/README.md)

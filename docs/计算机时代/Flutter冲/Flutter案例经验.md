@@ -4,15 +4,15 @@
 
 新建五个页面
 
-​`one_page.dart`​,
+`one_page.dart`​,
 
-​`two_page.dart`​,
+`two_page.dart`​,
 
-​`three_page.dart`​,
+`three_page.dart`​,
 
-​`four_page.dart`​,
+`four_page.dart`​,
 
-​`five_page.dart`​
+`five_page.dart`​
 
 每个页面内容如下
 
@@ -182,7 +182,7 @@ theme: ThemeData(
 
 最终效果
 
-​ ​​![2-1](assets/2-1-20230930221950-whlal7c.png)​![3](assets/3-20230930221954-dj2ac14.png)​​
+ ​​![2-1](assets/2-1-20230930221950-whlal7c.png)​![3](assets/3-20230930221954-dj2ac14.png)​​
 
 # 引入阿里 iconfont 图标
 
@@ -190,13 +190,13 @@ theme: ThemeData(
 
 iconfont 网址：[https://www.iconfont.cn/](https://www.iconfont.cn/)
 
-​​![4](assets/4-20230930222019-yf1ergf.png)​​
+![4](assets/4-20230930222019-yf1ergf.png)​​
 
 解压下载文件
 
 将文件中的 **iconfont.ttf** 文件复制到工程目录下 `lib/assets/icons/`​,如果没有则新建
 
-​​![5](assets/5-20230930222031-znygcf2.png)​​
+![5](assets/5-20230930222031-znygcf2.png)​​
 
 修改上节代码
 
@@ -279,7 +279,7 @@ class _TwoPageState extends State<TwoPage> {
 
 轮播图运行效果
 
-​![8](assets/8-20230930222133-5kb4rux.png)​
+![8](assets/8-20230930222133-5kb4rux.png)​
 
 轮播插件具体属性
 
@@ -615,7 +615,10 @@ class _TwoPageState extends State<TwoPage> {
 
 如果视频无法播放，右击鼠标 》显示控件，点击播放
 
-<video controls="controls" src="assets/9-20231002010643-76wzp6l.mov" data-src="assets/9-20231002010643-76wzp6l.mov"></video>
+<video controls="controls" 
+  src="./assets/9-20231002010643-76wzp6l.mov" 
+  data-src="/计算机时代/Flutter冲/assets/9-20231002010643-76wzp6l.mov">
+</video>
 
 # 代码生成 Model
 
@@ -635,7 +638,7 @@ dev_dependencies:
 
  打开网址：[https://caijinglong.github.io/json2dart/index.html](https://caijinglong.github.io/json2dart/index.html)
 
-​![1](assets/1-20230930222337-6hx78ou.png)​
+![1](assets/1-20230930222337-6hx78ou.png)​
 
 执行命令生成.g 文件
 
@@ -645,7 +648,7 @@ dev_dependencies:
 flutter packages pub run build_runner build
 ```
 
-​![2](assets/2-20230930222351-uz90y9m.png)​​​
+![2](assets/2-20230930222351-uz90y9m.png)​​​
 
 使用如下命令监视项目文件改动
 
@@ -661,7 +664,7 @@ flutter packages pub run build_runner build --delete-conflicting-outputs
 
 ThreePage 页面代码使用实例
 
-​`banner_entity.dart`​
+`banner_entity.dart`​
 
 ```dart
 import 'package:json_annotation/json_annotation.dart';
@@ -715,7 +718,7 @@ class Data extends Object {
 }
 ```
 
-​`banner_entity.g.dart`​
+`banner_entity.g.dart`​
 
 ```dart
 // GENERATED CODE - DO NOT MODIFY BY HAND
@@ -758,7 +761,7 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
     };
 ```
 
-​`three_page.dart`​
+`three_page.dart`​
 
 ```dart
 import 'dart:convert';
@@ -881,11 +884,11 @@ class _ThreePageState extends State<ThreePage> {
 
 运行效果
 
-​​![3](assets/3-20230930222412-e17yr7o.png)​​
+![3](assets/3-20230930222412-e17yr7o.png)​​
 
 代码结构图
 
-​​![4](assets/4-20230930222416-wjvfpy5.png)​​
+![4](assets/4-20230930222416-wjvfpy5.png)​​
 
 # 处理 Android 异形屏启动状态栏无法全屏问题
 
