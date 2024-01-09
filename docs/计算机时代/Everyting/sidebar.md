@@ -1,0 +1,8 @@
+- [ApacheDoris](/计算机时代/Everyting/ApacheDoris.md)
+- [Nginx证书设置](/计算机时代/Everyting/Nginx%E8%AF%81%E4%B9%A6%E8%AE%BE%E7%BD%AE.md)
+- [Redroid源码修改](/计算机时代/Everyting/Redroid%E6%BA%90%E7%A0%81%E4%BF%AE%E6%94%B9.md)
+- [Linux部分命令](/计算机时代/Everyting/Linux%E9%83%A8%E5%88%86%E5%91%BD%E4%BB%A4.md)
+- [Redroid编译](/计算机时代/Everyting/Redroid%E7%BC%96%E8%AF%91.md)
+- [Windows下全局快捷键Alias设置](/计算机时代/Everyting/Windows%E4%B8%8B%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AEAlias%E8%AE%BE%E7%BD%AE.md)
+- [ffmpeg操作](/计算机时代/Everyting/ffmpeg%E6%93%8D%E4%BD%9C.md)
+- [Mac压缩加密](/计算机时代/Everyting/Mac%E5%8E%8B%E7%BC%A9%E5%8A%A0%E5%AF%86.md)
