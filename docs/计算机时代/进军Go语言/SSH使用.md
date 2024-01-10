@@ -64,7 +64,7 @@ type SSHConnectConfig struct {
 
 ## 基础链接方法
 
-	根据机器信息构建sshConnectConfig对象， 然后通过`NewSshClient`​方法构建Client。一旦获取到Client， 则可以通过Client进行一些基本操作。 
+根据机器信息构建sshConnectConfig对象， 然后通过`NewSshClient`​方法构建Client。一旦获取到Client， 则可以通过Client进行一些基本操作。 
 
 ```go
 func buildAuthMethod(authType int, password string, pemKeyPath string) ([]ssh.AuthMethod, ConnectionError) {
@@ -110,11 +110,11 @@ func NewSshClient(connConfig SSHConnectConfig) (*ssh.Client, ConnectionError) {
 }
 ```
 
-	通过封装上述方法， 我们可以轻易实现机器A和机器B的链接。 但是如何链接假设信息里的机器C呢。很明显， 上述方法不行， 我们来增强下链接方法
+通过封装上述方法， 我们可以轻易实现机器A和机器B的链接。 但是如何链接假设信息里的机器C呢。很明显， 上述方法不行， 我们来增强下链接方法
 
 ## 通过跳板机链接
 
-	通过传入顺序数组，来进行链接。如果数组元素只有一个，则直接创建返回Client对象；如果数组存在多个，则通过在Client新建隧道来链接下一跳机器返回下一跳机器的Client对象。
+通过传入顺序数组，来进行链接。如果数组元素只有一个，则直接创建返回Client对象；如果数组存在多个，则通过在Client新建隧道来链接下一跳机器返回下一跳机器的Client对象。
 
 ```go
 func jumpToNext(client *ssh.Client, connConfig SSHConnectConfig) (*ssh.Client, ConnectionError) {
@@ -165,7 +165,7 @@ func NewSshClientWithProxy(configs []SSHConnectConfig) (*ssh.Client, ConnectionE
 
 # 需求
 
-	知识是通过使用思源笔记的docker镜像构建的，通过前置Nginx将请求收敛到80端口下，通过腾讯云免费SSL证书+Nginx实现https安全链接。但是由于使用轻量云服务器，有可能被攻击的风险。所以需要实现一个小工具：**执行后可以自动链接云服务器实现笔记数据备份至当前电脑目录的自动化工具。**
+知识是通过使用思源笔记的docker镜像构建的，通过前置Nginx将请求收敛到80端口下，通过腾讯云免费SSL证书+Nginx实现https安全链接。但是由于使用轻量云服务器，有可能被攻击的风险。所以需要实现一个小工具：**执行后可以自动链接云服务器实现笔记数据备份至当前电脑目录的自动化工具。**
 
 ## 要求
 
