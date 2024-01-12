@@ -615,10 +615,7 @@ class _TwoPageState extends State<TwoPage> {
 
 如果视频无法播放，右击鼠标 》显示控件，点击播放
 
-<video controls="controls" 
-  src="./assets/9-20231002010643-76wzp6l.mov" 
-  data-src="/计算机时代/Flutter冲/assets/9-20231002010643-76wzp6l.mov">
-</video>
+<video controls="controls"  src="/计算机时代/Flutter冲/assets/92023100201064376wzp6l.mov" width="100%"></video>
 
 # 代码生成 Model
 
