@@ -109,6 +109,8 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml.min.js"></script>
 
   <style>
     /* .sidebar { padding: 12px 0; } */
@@ -137,10 +139,16 @@
       width: 20px;
       height: 38px;
       position: relative;
-      top: 0px;
+      top: calc(100vh/2);
       left: 300px;
       transition: transform .25s ease-out;
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuOTg3IDEzLjIyOEwzLjc2IDlsNC40NTctNC40NTguNjI3LS42M0EuNzUuNzUgMCAxMDcuNzggMi44NThsLS40OTguNUwyLjE3IDguNDdhLjc1Ljc1IDAgMDAwIDEuMDZsNC44NTQgNC44NTUuNzU5Ljc2YS43NS43NSAwIDAwMS4wNjItMS4wNTdsLS44NTctLjg2eiIgZmlsbD0iIzY0NkE3MyIvPjxwYXRoIGQ9Ik0xNC42NjggMTMuMjI4TDEwLjQ0IDlsNC40NTctNC40NTguNjI3LS42M2EuNzUuNzUgMCAxMC0xLjA2NC0xLjA1NmwtLjQ5OC41TDguODUgOC40N2EuNzUuNzUgMCAwMDAgMS4wNmw0Ljg1NCA0Ljg1NS43NTguNzZhLjc1Ljc1IDAgMDAxLjA2Mi0xLjA1N2wtLjg1Ni0uODZ6IiBmaWxsPSIjNjQ2QTczIi8+PC9zdmc+");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .sidebar-toggle:hover {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuOTg3IDEzLjIyOEwzLjc2IDlsNC40NTctNC40NTguNjI3LS42M0EuNzUuNzUgMCAxMDcuNzggMi44NTdsLS40OTguNUwyLjE3IDguNDdhLjc1Ljc1IDAgMDAwIDEuMDZsNC44NTQgNC44NTUuNzU5Ljc2YS43NS43NSAwIDAwMS4wNjItMS4wNTdsLS44NTctLjg2eiIgZmlsbD0iIzMzNzBGRiIvPjxwYXRoIGQ9Ik0xNC42NjggMTMuMjI4TDEwLjQ0IDlsNC40NTctNC40NTguNjI3LS42M2EuNzUuNzUgMCAxMC0xLjA2NC0xLjA1NmwtLjQ5OC41TDguODUgOC40N2EuNzUuNzUgMCAwMDAgMS4wNmw0Ljg1NCA0Ljg1NS43NTguNzZhLjc1Ljc1IDAgMDAxLjA2Mi0xLjA1N2wtLjg1Ni0uODZ6IiBmaWxsPSIjMzM3MEZGIi8+PC9zdmc+");
       background-repeat: no-repeat;
       background-position: center;
     }
