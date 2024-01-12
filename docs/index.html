@@ -29,9 +29,9 @@
       // 仓库地址
       // repo: 'https://github.com/TimeOfPassage/timeofpassage.github.io/',
       // 加载 _navbar.md
-      // loadNavbar: true,
+      // loadNavbar: false,
       // 加载 nav.md
-      loadNavbar: 'nav.md',
+      // loadNavbar: 'nav.md',
       // 通过设置 coverpage 参数，可以开启渲染封面的功能
       coverpage: false,
       // coverpage: 'coverpage.md',
@@ -113,27 +113,6 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml.min.js"></script>
 
   <style>
-    /* .sidebar { padding: 12px 0; } */
-    /* .scroll-to-top { border-radius: 90px !important; line-height: 50px !important; } */
-
-    /* webkit */
-    .sidebar::-webkit-scrollbar {
-      width: 4px
-    }
-
-    .sidebar::-webkit-scrollbar-thumb {
-      background: transparent;
-      border-radius: 4px
-    }
-
-    .sidebar:hover::-webkit-scrollbar-thumb {
-      background: hsla(0, 0%, 53.3%, .4)
-    }
-
-    .sidebar:hover::-webkit-scrollbar-track {
-      background: hsla(0, 0%, 53.3%, .1)
-    }
-
     /* sidebar-toggle */
     .sidebar-toggle {
       width: 20px;
@@ -168,10 +147,12 @@
     body.close .sidebar-toggle {
       background-image: none;
     }
+
     /* nav */
     .nav {
       width: 0px;
     }
+
     .nav .page_toc {
       display: none;
     }
@@ -179,6 +160,7 @@
     body.close .nav {
       width: var(--toc-width, 200px);
     }
+
     body.close .nav .page_toc {
       display: block;
     }

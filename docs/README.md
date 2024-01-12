@@ -12,5 +12,47 @@
 生命本是一场漂泊的漫旅，遇见了谁都是一个美丽的意外。我珍惜着每一个可以让我称做朋友的人，因为那是可以让漂泊的心驻足的地方。有时候会被一句话感动，因为真诚；有时候会为一首歌流泪，因为自然。要快乐，不止此时，而是一生！
 
 
-> [!NOTE]
-> An alert of type 'note' using global style 'callout'.
+# 文档插件使用示例
+
+## docsify-plugin-flexible-alerts
+
+https://github.com/fzankl/docsify-plugin-flexible-alerts
+
+> [!NOTE|label:信息]
+> 这里是修改标题的示例.
+
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
+
+> [!WARNING]
+> An alert of type 'warning' using global style 'callout'.
+
+> [!ATTENTION]
+> An alert of type 'attention' using global style 'callout'.
+
+> [!TIP|style:flat|label:My own heading|iconVisibility:hidden]
+> An alert of type 'tip' using alert specific style 'flat' which overrides global style 'callout'.
+> In addition, this alert uses an own heading and hides specific icon.
+
+
+## docsify-example-panels
+
+https://vagnerdomingues.github.io/docsify-example-panels/#/
+
+<!-- panels:start -->
+<!-- div:title-panel -->
+这里是标题
+
+<!-- div:left-panel -->
+这里是左侧面板
+
+<!-- div:right-panel -->
+这里是右侧面板
+
+<!-- panels:end -->
+
+
+
+参考示例 
+
+![image-20240112182725984](./assets/image-20240112182725984.png)
