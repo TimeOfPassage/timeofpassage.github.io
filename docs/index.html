@@ -168,6 +168,20 @@
     body.close .sidebar-toggle {
       background-image: none;
     }
+    /* nav */
+    .nav {
+      width: 0px;
+    }
+    .nav .page_toc {
+      display: none;
+    }
+
+    body.close .nav {
+      width: var(--toc-width);
+    }
+    body.close .nav .page_toc {
+      display: block;
+    }
 
     :root {
       --toc-width: 300px;
