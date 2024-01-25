@@ -1,4 +1,5 @@
 - [📄 Shell脚本模板](/计算机时代/服务器/Shell%E8%84%9A%E6%9C%AC%E6%A8%A1%E6%9D%BF.md)
-- [📄 AlibabaCloudLinux3(SoaringFalcon)](/计算机时代/服务器/AlibabaCloudLinux3%28SoaringFalcon%29.md)
+- [📄 Alibaba Cloud Linux 3 (Soaring Falcon)](/计算机时代/服务器/AlibabaCloudLinux3%28SoaringFalcon%29.md)
 - [📄 Linux系统注册Jenkins服务](/计算机时代/服务器/Linux%E7%B3%BB%E7%BB%9F%E6%B3%A8%E5%86%8CJenkins%E6%9C%8D%E5%8A%A1.md)
 - [📄 Doris部署](/计算机时代/服务器/Doris%E9%83%A8%E7%BD%B2.md)
+- [📄 Flink部署](/计算机时代/服务器/Flink%E9%83%A8%E7%BD%B2.md)
