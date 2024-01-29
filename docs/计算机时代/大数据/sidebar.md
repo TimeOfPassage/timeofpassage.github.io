@@ -1,1 +1,2 @@
 - [📄 MySQL Flink CDC Doris](/计算机时代/大数据/MySQL-FlinkCDC-Doris.md)
+- [📄 Hadoop搭建细节](/计算机时代/大数据/Hadoop%E6%90%AD%E5%BB%BA%E7%BB%86%E8%8A%82.md)
