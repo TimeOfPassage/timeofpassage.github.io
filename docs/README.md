@@ -53,6 +53,33 @@ https://vagnerdomingues.github.io/docsify-example-panels/#/
 
 
 
-参考示例 
+### 参考示例 
 
 ![image-20240112182725984](./assets/image-20240112182725984.png)
+
+
+## 内嵌示例
+
+* iframe .html, .htm
+* markdown .markdown, .md
+* audio .mp3
+* video .mp4, .ogg
+* code other file extension
+
+```
+[filename](_media/example.md ':include :type=code')
+[cinwell website](https://cinwell.com ':include :type=iframe width=100% height=400px')
+[内嵌文件](_media/example.js ':include :type=code :fragment=demo')
+```
+
+### iframe示例
+
+[timeofpassage.github.io](https://timeofpassage.github.io ':include :type=iframe width=100% height=400px')
+
+### 内嵌文件
+[内嵌文件](_media/example.js ':include :type=code :fragment=demo')
+[coverpage](coverpage.md ':include :type=file')
+
+[gist: content.md](https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/content.md ':include')
+
+[gist: script.js](https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/script.js ':include :type=code')
