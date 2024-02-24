@@ -1,2 +1,0 @@
-- [二分查找](/articles/algorithm/二分查找.md)
-- [Snowflake](/articles/algorithm/雪花算法.md)

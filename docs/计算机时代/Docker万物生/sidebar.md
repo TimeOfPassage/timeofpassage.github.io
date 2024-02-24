@@ -3,3 +3,4 @@
 - [📄 Nginx增加基础鉴权](/计算机时代/Docker万物生/Nginx%E5%A2%9E%E5%8A%A0%E5%9F%BA%E7%A1%80%E9%89%B4%E6%9D%83.md)
 - [📄 ApiSix搭建](/计算机时代/Docker万物生/ApiSix%E6%90%AD%E5%BB%BA.md)
 - [📄 ApiSix 使用指南](/计算机时代/Docker万物生/ApiSix%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md)
+- [📄 离线机器安装docker容器](/计算机时代/Docker万物生/%E7%A6%BB%E7%BA%BF%E6%9C%BA%E5%99%A8%E5%AE%89%E8%A3%85docker%E5%AE%B9%E5%99%A8.md)

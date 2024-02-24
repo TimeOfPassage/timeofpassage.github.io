@@ -19,4 +19,4 @@ docker load -i /root/Downloads/mysql57.tar
 docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
 ```
 
-![](../../_media/image/20210822/1.jpg)
+![](assets/offline-docker-container.jpg)
