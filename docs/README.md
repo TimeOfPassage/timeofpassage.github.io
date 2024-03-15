@@ -72,14 +72,13 @@ https://vagnerdomingues.github.io/docsify-example-panels/#/
 [内嵌文件](_media/example.js ':include :type=code :fragment=demo')
 ```
 
-### iframe示例
+<!-- ### iframe示例 -->
+<!-- [www.baidu.com](https://www.baidu.com ':include :type=iframe width=100% height=400px') -->
 
-[timeofpassage.github.io](https://timeofpassage.github.io ':include :type=iframe width=100% height=400px')
-
-### 内嵌文件
-[内嵌文件](_media/example.js ':include :type=code :fragment=demo')
+<!-- ### 内嵌文件
+[内嵌文件](./js/toc.js ':include :type=code :fragment=demo')
 [coverpage](coverpage.md ':include :type=file')
 
 [gist: content.md](https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/content.md ':include')
 
-[gist: script.js](https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/script.js ':include :type=code')
+[gist: script.js](https://gist.githubusercontent.com/anikethsaha/f88893bb563bb7229d6e575db53a8c15/raw/script.js ':include :type=code') -->
