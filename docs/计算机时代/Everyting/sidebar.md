@@ -6,4 +6,5 @@
 - [📄 Windows下全局快捷键Alias设置](/计算机时代/Everyting/Windows%E4%B8%8B%E5%85%A8%E5%B1%80%E5%BF%AB%E6%8D%B7%E9%94%AEAlias%E8%AE%BE%E7%BD%AE.md)
 - [📄 ffmpeg操作](/计算机时代/Everyting/ffmpeg%E6%93%8D%E4%BD%9C.md)
 - [📄 Mac压缩加密](/计算机时代/Everyting/Mac%E5%8E%8B%E7%BC%A9%E5%8A%A0%E5%AF%86.md)
-- [📄 Shenyu-Waf插件](/计算机时代/Gateway服务网关/Shenyu-Waf%E6%8F%92%E4%BB%B6.md)
+- [📄 Shenyu-Waf插件](/计算机时代/Everyting/Shenyu-Waf%E6%8F%92%E4%BB%B6.md)
+- [📄 Chrome插件下载](/计算机时代/Everyting/Chrome%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD.md)
