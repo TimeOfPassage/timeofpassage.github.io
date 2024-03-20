@@ -1,4 +1,4 @@
-# #Windows下全局快捷键Alias设置
+# Windows下全局快捷键Alias设置
 
 进入系统C盘用户目录，打开隐藏目录显示
 
@@ -7,16 +7,24 @@
 在该目录下查找文件`.bashrc`​，如果没有就新建一个。打开该文件写入自己想要的快捷指令，格式如下
 
 ```properties
-alias ll='ls -l'
+alias ls='ls -F --color=auto --show-control-chars' # 使用ls命令的时候加上颜色
+export LC_ALL=zh_CN.UTF-8 # 设置终端打开的编码
+alias ll='ls -la -F --color=auto --show-control-chars'
+alias cls='clear'
 alias gs='git status'
-alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
-alias glp='git log --pretty=oneline'
-alias gac='git add . && git commit -m '
-alias gpush='git push'
 alias gpull='git pull'
+alias gpush='git push'
+alias gac='git add . && git commit -m'
+alias gl='git log'
+alias gb='git branch'
+alias glp='git log --pretty=oneline'
+alias gclone='git clone'
 alias gm='git merge'
+alias gr='git restore'
+alias gignore='git update-index --assume-unchanged'
+alias gunignore='git update-index --no-assume-unchanged'
 ```
 
 如果上述设置完毕后不好使，继续查找文件`.bash_profile`​，没有则新建，写入如下内容
