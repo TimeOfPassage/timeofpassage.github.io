@@ -123,23 +123,25 @@
     }
 
     .sidebar-toggle span:first-child {
-        display: block;
-        width: 5px;
-        height: 15px;
-        background-color: #ccc;
-        transition: transform 0.1s ease; /* 添加过渡效果 */
-        border-radius: 100px;
-        transform: translateY(3px) rotate(0deg) translateZ(0px);
+      display: block;
+      width: 5px;
+      height: 15px;
+      background-color: #ccc;
+      transition: transform 0.1s ease;
+      /* 添加过渡效果 */
+      border-radius: 100px;
+      transform: translateY(3px) rotate(0deg) translateZ(0px);
     }
 
     .sidebar-toggle span:last-child {
-        display: block;
-        width: 5px;
-        height: 15px;
-        background-color: #ccc;
-        transition: transform 0.1s ease; /* 添加过渡效果 */
-        border-radius: 100px;
-        transform: translateY(-3px) rotate(0deg) translateZ(0px);
+      display: block;
+      width: 5px;
+      height: 15px;
+      background-color: #ccc;
+      transition: transform 0.1s ease;
+      /* 添加过渡效果 */
+      border-radius: 100px;
+      transform: translateY(-3px) rotate(0deg) translateZ(0px);
     }
 
     .sidebar-toggle:hover span:first-child {
@@ -172,11 +174,16 @@
 
     /* nav */
     .nav {
-      width: 0px;
+      position: fixed;
+      right: 0px;
+      bottom: calc(100vh/1.5);
+      z-index: 9999;
     }
 
     .nav .page_toc {
       display: none;
+      font-size: large;
+      font-weight: 700;
     }
 
     body.close .nav {
@@ -187,14 +194,18 @@
       display: block;
     }
 
-    body.close .content {
-      left: 48px;
-    }
-
     /* 关闭侧边导航栏，同时隐藏顶部导航 */
     body.close .app-nav {
       display: none;
     }
+
+    .app-nav {
+      position: fixed;
+      background-color: white;
+      margin: 0px;
+    }
+
+
 
     /* markdown-section */
     .markdown-section {
