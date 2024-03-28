@@ -114,21 +114,42 @@
   <style>
     /* sidebar-toggle */
     .sidebar-toggle {
-      width: 20px;
-      height: 38px;
+      width: 30px;
+      height: 100px;
       position: relative;
-      top: calc(100vh/2);
+      top: calc(100vh/2 - 100px);
       left: 300px;
       transition: transform .25s ease-out;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuOTg3IDEzLjIyOEwzLjc2IDlsNC40NTctNC40NTguNjI3LS42M0EuNzUuNzUgMCAxMDcuNzggMi44NThsLS40OTguNUwyLjE3IDguNDdhLjc1Ljc1IDAgMDAwIDEuMDZsNC44NTQgNC44NTUuNzU5Ljc2YS43NS43NSAwIDAwMS4wNjItMS4wNTdsLS44NTctLjg2eiIgZmlsbD0iIzY0NkE3MyIvPjxwYXRoIGQ9Ik0xNC42NjggMTMuMjI4TDEwLjQ0IDlsNC40NTctNC40NTguNjI3LS42M2EuNzUuNzUgMCAxMC0xLjA2NC0xLjA1NmwtLjQ5OC41TDguODUgOC40N2EuNzUuNzUgMCAwMDAgMS4wNmw0Ljg1NCA0Ljg1NS43NTguNzZhLjc1Ljc1IDAgMDAxLjA2Mi0xLjA1N2wtLjg1Ni0uODZ6IiBmaWxsPSIjNjQ2QTczIi8+PC9zdmc+");
-      background-repeat: no-repeat;
-      background-position: center;
     }
 
-    .sidebar-toggle:hover {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuOTg3IDEzLjIyOEwzLjc2IDlsNC40NTctNC40NTguNjI3LS42M0EuNzUuNzUgMCAxMDcuNzggMi44NTdsLS40OTguNUwyLjE3IDguNDdhLjc1Ljc1IDAgMDAwIDEuMDZsNC44NTQgNC44NTUuNzU5Ljc2YS43NS43NSAwIDAwMS4wNjItMS4wNTdsLS44NTctLjg2eiIgZmlsbD0iIzMzNzBGRiIvPjxwYXRoIGQ9Ik0xNC42NjggMTMuMjI4TDEwLjQ0IDlsNC40NTctNC40NTguNjI3LS42M2EuNzUuNzUgMCAxMC0xLjA2NC0xLjA1NmwtLjQ5OC41TDguODUgOC40N2EuNzUuNzUgMCAwMDAgMS4wNmw0Ljg1NCA0Ljg1NS43NTguNzZhLjc1Ljc1IDAgMDAxLjA2Mi0xLjA1N2wtLjg1Ni0uODZ6IiBmaWxsPSIjMzM3MEZGIi8+PC9zdmc+");
-      background-repeat: no-repeat;
-      background-position: center;
+    .sidebar-toggle span:first-child {
+        display: block;
+        width: 5px;
+        height: 15px;
+        background-color: #ccc;
+        transition: transform 0.1s ease; /* 添加过渡效果 */
+        border-radius: 100px;
+        transform: translateY(3px) rotate(0deg) translateZ(0px);
+    }
+
+    .sidebar-toggle span:last-child {
+        display: block;
+        width: 5px;
+        height: 15px;
+        background-color: #ccc;
+        transition: transform 0.1s ease; /* 添加过渡效果 */
+        border-radius: 100px;
+        transform: translateY(-3px) rotate(0deg) translateZ(0px);
+    }
+
+    .sidebar-toggle:hover span:first-child {
+      transform: translateY(4px) rotate(20deg) translateZ(0px);
+      background-color: #000000;
+    }
+
+    .sidebar-toggle:hover span:last-child {
+      transform: translateY(-4px) rotate(-20deg) translateZ(0px);
+      background-color: #000000;
     }
 
     .sidebar-toggle span {
@@ -139,12 +160,14 @@
       transform: translateX(-300px);
     }
 
-    body.close .sidebar-toggle span {
-      display: block;
+    body.close .sidebar-toggle:hover span:first-child {
+      transform: translateY(4px) rotate(-20deg) translateZ(0px);
+      background-color: #000000;
     }
 
-    body.close .sidebar-toggle {
-      background-image: none;
+    body.close .sidebar-toggle:hover span:last-child {
+      transform: translateY(-4px) rotate(20deg) translateZ(0px);
+      background-color: #000000;
     }
 
     /* nav */
