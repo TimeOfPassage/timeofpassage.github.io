@@ -5,3 +5,4 @@
 - [📄 SSH自动化](/计算机时代/无限Python/SSH%E8%87%AA%E5%8A%A8%E5%8C%96.md)
 - [📄 子进程执行shell命令](/计算机时代/无限Python/%E5%AD%90%E8%BF%9B%E7%A8%8B%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4.md)
 - [📄 Python操作Redis](/计算机时代/无限Python/Python操作Redis.md)
+- [📄 并行压测](/计算机时代/无限Python/并行测试.md)
