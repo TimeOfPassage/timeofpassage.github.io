@@ -53,9 +53,12 @@ https://vagnerdomingues.github.io/docsify-example-panels/#/
 
 
 
-### 参考示例 
+### 图片Reference
+```
+![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
+```
 
-![image-20240112182725984](./assets/image-20240112182725984.png)
+![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
 
 
 ## 内嵌示例
