@@ -72,7 +72,7 @@ https://vagnerdomingues.github.io/docsify-example-panels/#/
 [内嵌文件](_media/example.js ':include :type=code :fragment=demo')
 ```
 
-<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=381 height=86 src="//music.163.com/outchain/player?type=2&id=2147408164&auto=1&height=66"></iframe> -->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=381 height=86 src="//music.163.com/outchain/player?type=2&id=2147408164&auto=1&height=66"></iframe>
 
 <!-- ### iframe示例 -->
 <!-- [测试](https://music.163.com/outchain/player?type=2&id=2147408164&auto=1&height=66 ':include :type=iframe width=330 height=86') -->
