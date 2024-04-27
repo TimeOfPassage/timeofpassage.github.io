@@ -12,6 +12,15 @@
 生命本是一场漂泊的漫旅，遇见了谁都是一个美丽的意外。我珍惜着每一个可以让我称做朋友的人，因为那是可以让漂泊的心驻足的地方。有时候会被一句话感动，因为真诚；有时候会为一首歌流泪，因为自然。要快乐，不止此时，而是一生！
 
 
+### 图片Reference
+```
+![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
+```
+
+![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
+
+
+
 # 文档插件使用示例
 
 ## docsify-plugin-flexible-alerts
@@ -50,16 +59,6 @@ https://vagnerdomingues.github.io/docsify-example-panels/#/
 这里是右侧面板
 
 <!-- panels:end -->
-
-
-
-### 图片Reference
-```
-![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
-```
-
-![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
-
 
 ## 内嵌示例
 
