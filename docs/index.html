@@ -99,7 +99,7 @@
   <!-- 回到顶部 -->
   <!-- <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script> -->
   <!-- 面板分割 -->
-  <script src="_base/js/docsify-example-panels.js"></script>
+  <!-- <script src="_base/js/docsify-example-panels.js"></script> -->
   <!-- 主题 -->
   <script src="_base/js/docsify-themeable.min.js"></script>
   <!-- 语法高亮 -->
@@ -112,6 +112,7 @@
   <script src="_base/js/prism-css.min.js"></script>
 
   <style>
+
     /* sidebar-toggle */
     .sidebar-toggle {
       width: 30px;
@@ -120,6 +121,7 @@
       top: calc(100vh/2 - 100px);
       left: 300px;
       transition: transform .25s ease-out;
+      background: transparent;
     }
 
     .sidebar-toggle span:first-child {
@@ -130,7 +132,7 @@
       transition: transform 0.1s ease;
       /* 添加过渡效果 */
       border-radius: 100px;
-      transform: translateY(3px) rotate(0deg) translateZ(0px);
+      transform: translateY(5px) rotate(0deg) translateZ(0px);
     }
 
     .sidebar-toggle span:last-child {
@@ -141,17 +143,17 @@
       transition: transform 0.1s ease;
       /* 添加过渡效果 */
       border-radius: 100px;
-      transform: translateY(-3px) rotate(0deg) translateZ(0px);
+      transform: translateY(-5px) rotate(0deg) translateZ(0px);
     }
 
     .sidebar-toggle:hover span:first-child {
       transform: translateY(4px) rotate(20deg) translateZ(0px);
-      background-color: #000000;
+      background-color: var(--theme-color, #42b983);
     }
 
     .sidebar-toggle:hover span:last-child {
       transform: translateY(-4px) rotate(-20deg) translateZ(0px);
-      background-color: #000000;
+      background-color: var(--theme-color, #42b983);
     }
 
     .sidebar-toggle span {
@@ -164,12 +166,12 @@
 
     body.close .sidebar-toggle:hover span:first-child {
       transform: translateY(4px) rotate(-20deg) translateZ(0px);
-      background-color: #000000;
+      background-color: var(--theme-color, #42b983);
     }
 
     body.close .sidebar-toggle:hover span:last-child {
       transform: translateY(-4px) rotate(20deg) translateZ(0px);
-      background-color: #000000;
+      background-color: var(--theme-color, #42b983);
     }
 
     /* nav */
@@ -209,9 +211,14 @@
 
     /* markdown-section */
     .markdown-section {
-      padding: 0px;
-      margin: 20px 0px;
       height: 100vh;
+      max-width: 90% !important;
+    }
+
+    body.close .markdown-section {
+      max-width: 100% !important;
+      padding: 0px;
+      margin: 0px;
     }
 
     /* 滚动条 */
