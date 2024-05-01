@@ -44,22 +44,6 @@ https://github.com/fzankl/docsify-plugin-flexible-alerts
 > In addition, this alert uses an own heading and hides specific icon.
 
 
-## docsify-example-panels
-
-https://vagnerdomingues.github.io/docsify-example-panels/#/
-
-<!-- panels:start -->
-<!-- div:title-panel -->
-这里是标题
-
-<!-- div:left-panel -->
-这里是左侧面板
-
-<!-- div:right-panel -->
-这里是右侧面板
-
-<!-- panels:end -->
-
 ## 内嵌示例
 
 * iframe .html, .htm
