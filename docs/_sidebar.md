@@ -10,7 +10,8 @@
   - [云函数Serverless](/计算机时代/云函数/README.md)
   - [音视频](/计算机时代/音视频集锦/README.md)
   - [大数据](/计算机时代/大数据/README.md)
-  - [Unkown](/计算机时代/Everyting/README.md)
+  - [服务器](/计算机时代/服务器/README.md)
+  - [未知分类](/计算机时代/Everyting/README.md)
 - 生活漫谈
   - [诗词](/生活漫谈/诗词/README.md)
   - [音乐](/生活漫谈/音乐/README.md)
