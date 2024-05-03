@@ -186,7 +186,6 @@
     .nav {
       position: fixed;
       right: 0px;
-      /* bottom: calc(100vh/1.5); */
       z-index: 9999;
     }
 
@@ -210,7 +209,7 @@
 
     .app-nav {
       position: fixed;
-      filter: blur(0.45px);
+      filter: blur(0.45px) opacity(0.6);
     }
 
     .app-nav a {
@@ -241,23 +240,18 @@
       text-align: right;
       padding-right: 4px;
       color: rgba(0, 0, 0, 0.4);
-      filter: blur(0.65px);
+      filter: blur(0.65px) opacity(0.65);
     }
 
     .sidebar ul li.active>a {
       font-weight: bold;
-      filter: blur(0px);
+      filter: blur(0px) opacity(1);
     }
 
     .sidebar {
       background: #f6f8fa;
       padding-top: 24px;
       direction: rtl;
-    }
-
-    .medium-zoom-overlay img {
-      width: 100px;
-      height: 100px;
     }
 
     /* markdown-section */
