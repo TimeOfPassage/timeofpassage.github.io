@@ -1,6 +1,6 @@
-# #mutate-assumes-lake
+# mutate-assumes-lake
 
-mutate
+## mutate
 
 vi.变化，产生突变
 
@@ -16,7 +16,7 @@ vt.改变，使突变
 
 ‍
 
-assumes
+## assumes
 
 假设、设想
 
@@ -26,7 +26,7 @@ This course assumes you have a basic understanding of React and JavaScript.
 
 ‍
 
-lake
+## lake
 
 n. 湖，湖泊；大量的液体；（液体）一滩；沉淀色料；胭脂红
 

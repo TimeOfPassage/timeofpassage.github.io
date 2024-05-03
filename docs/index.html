@@ -21,7 +21,7 @@
     // 参考：https://docsify.js.org/#/zh-cn/configuration
     // 参考：https://leohsiao.com/Web/CMS/docsify.html
     window.$docsify = {
-      name: "写写画画乱七八槽",
+      name: "写写画画",
       // name: '<font style="font-family:"楷体","楷体_GB2312";">Mizar 随笔集</font>',
       // 在侧边栏中出现的网站图标，你可以使用CSS来更改大小
       // logo: '/_media/logo.png',
@@ -112,7 +112,6 @@
   <script src="_base/js/prism-css.min.js"></script>
 
   <style>
-
     /* sidebar-toggle */
     .sidebar-toggle {
       width: 30px;
@@ -184,8 +183,7 @@
 
     .nav .page_toc {
       display: none;
-      font-size: large;
-      font-weight: 700;
+      font-size: small;
     }
 
     body.close .nav {
@@ -203,11 +201,50 @@
 
     .app-nav {
       position: fixed;
-      background-color: white;
-      margin: 0px;
+      filter: blur(0.45px);
     }
 
+    .app-nav a {
+      font-size: 12px;
+      font-weight: bold;
+    }
 
+    .app-name-link {
+      font-size: 20px;
+      font-weight: bold;
+      width: 100%;
+      display: block;
+      text-align: right;
+      padding-right: 20%;
+    }
+
+    .sidebar ul, .sidebar ul li {
+      font-weight: bold;
+      text-align: right;
+      color: #42b983;
+    }
+
+    .sidebar ul li a {
+      font-weight: thin;
+      text-align: right;
+      padding-right: 4px;
+      color: rgba(0, 0, 0, 0.4);
+      filter: blur(0.65px);
+    }
+
+    .sidebar ul li.active>a {
+      font-weight: bold;
+      filter: blur(0px);
+    }
+
+    .sidebar {
+      background: #f6f8fa;
+    }
+
+    .medium-zoom-overlay img {
+      width: 100px;
+      height: 100px;
+    }
 
     /* markdown-section */
     .markdown-section {
@@ -216,7 +253,7 @@
     }
 
     body.close .markdown-section {
-      max-width: 100% !important;
+      max-width: 96% !important;
       padding: 0px;
       margin: 0px;
     }

@@ -1,4 +1,4 @@
-# 开阳随笔集
+# 开阳星
 
 > 开阳(Mizar)是大熊座的一颗恒星，位在北斗的斗柄尾端第二颗星，是北斗七星之一。
 
@@ -11,13 +11,14 @@
 
 生命本是一场漂泊的漫旅，遇见了谁都是一个美丽的意外。我珍惜着每一个可以让我称做朋友的人，因为那是可以让漂泊的心驻足的地方。有时候会被一句话感动，因为真诚；有时候会为一首歌流泪，因为自然。要快乐，不止此时，而是一生！
 
+![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
 
-### 图片Reference
+<!-- ### 图片Reference
 ```
 ![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
 ```
 
-![image-20240112182725984](https://pic3.zhimg.com/v2-e25bd3a442b4f2318cb652fbe7190996_r.jpg)
+
 
 
 
@@ -58,7 +59,7 @@ https://github.com/fzankl/docsify-plugin-flexible-alerts
 [内嵌文件](_media/example.js ':include :type=code :fragment=demo')
 ```
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=381 height=86 src="//music.163.com/outchain/player?type=2&id=2147408164&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=381 height=86 src="//music.163.com/outchain/player?type=2&id=2147408164&auto=1&height=66"></iframe> -->
 
 <!-- ### iframe示例 -->
 <!-- [测试](https://music.163.com/outchain/player?type=2&id=2147408164&auto=1&height=66 ':include :type=iframe width=330 height=86') -->
