@@ -78,6 +78,16 @@
       //   offset: 500
       // }
     }
+    // 监听返回键增加页面关闭效果
+    window.addEventListener('keydown', function (e) {
+      if (e.code === 'Escape') {
+        if(document.body.classList.contains('close')) {
+          document.body.classList.remove('close');
+        } else {
+          document.body.classList.add('close');
+        }
+      }
+    });
   </script>
   <!-- docsify -->
   <script src="_base/js/docsify.min.js"></script>
