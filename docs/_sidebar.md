@@ -1,5 +1,5 @@
 - 计算机时代
-  - [Java](/计算机时代/Java世界/1.DelegatingFilterProxy.md)
+  - [JAVA](/计算机时代/Java世界/1.DelegatingFilterProxy.md)
   - [Flutter](/计算机时代/Flutter冲/1.Dart请求工具封装.md)
   - [Python](/计算机时代/无限Python/1.子进程执行shell命令.md)
   - [Go](/计算机时代/进军Go语言/1.交叉编译.md)
@@ -7,7 +7,7 @@
   - [算法](/计算机时代/算法(啊哈)/1.分布式ID生成-雪花算法.md)
   - [Docker](计算机时代/Docker万物生/1.ApiSix使用指南.md)
   - [服务器](/计算机时代/服务器/1.AlibabaCloudLinux3(SoaringFalcon).md)
-  - [云函数Serverless](/计算机时代/云函数/1.Serverless开发者平台.md)
+  - [Serverless](/计算机时代/云函数/1.Serverless开发者平台.md)
   - [音视频](/计算机时代/音视频集锦/1.ffmpeg命令集合.md)
   - [大数据](/计算机时代/大数据/1.Flink-SQL同步示例.md)
   - [未知分类](/计算机时代/Everyting/1.ApacheDoris.md)
