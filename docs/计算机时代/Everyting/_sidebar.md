@@ -8,3 +8,4 @@
 - [Shenyu-Waf插件](/计算机时代/Everyting/8.Shenyu-Waf插件.md)
 - [Windows下全局快捷键Alias设置](/计算机时代/Everyting/9.Windows下全局快捷键Alias设置.md)
 - [ffmpeg操作](/计算机时代/Everyting/10.ffmpeg操作.md)
+- [VSCode插件开发步骤](/计算机时代/Everyting/11.VSCode插件开发步骤.md)
