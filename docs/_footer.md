@@ -1,2 +1,0 @@
-<!-- <a href="https://beian.miit.gov.cn/" target="_blank">Copyright © 2024 All Rights Reserved www.mizar.com</a> -->
-<a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2024100891号-1</a>
