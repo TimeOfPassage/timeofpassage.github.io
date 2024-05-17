@@ -1,3 +1,3 @@
-- [abbreviation-abnormal-ability](/从零开始的英语/1.abbreviation-abnormal-ability.md)
-- [sunburn-showcase-after-graduation](/从零开始的英语/2.sunburn-showcase-after-graduation.md)
-- [mutate-assumes-lake](/从零开始的英语/3.mutate-assumes-lake.md)
+- [第一天](/从零开始的英语/1.abbreviation-abnormal-ability.md)
+- [第二天](/从零开始的英语/2.sunburn-showcase-after-graduation.md)
+- [第三天](/从零开始的英语/3.mutate-assumes-lake.md)

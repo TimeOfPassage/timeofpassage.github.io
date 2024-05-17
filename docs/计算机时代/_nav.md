@@ -9,4 +9,4 @@
 - [云函数Serverless](/计算机时代/云函数/1.Serverless开发者平台.md)
 - [音视频](/计算机时代/音视频集锦/1.ffmpeg命令集合.md)
 - [大数据](/计算机时代/大数据/1.Flink-SQL同步示例.md)
-- [未知分类](/计算机时代/Everyting/1.ApacheDoris.md)
+- [未知分类](/计算机时代/未知分类/1.ApacheDoris.md)
