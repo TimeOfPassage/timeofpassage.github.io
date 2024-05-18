@@ -1,0 +1,13 @@
+/* 滚动条 */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #cccedb;
+}

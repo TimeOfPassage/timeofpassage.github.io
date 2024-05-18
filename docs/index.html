@@ -13,6 +13,10 @@
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
   <!-- 目录跳转 -->
   <link rel="stylesheet" href="_base/css/toc.css">
+  <link rel="stylesheet" href="_base/css/main.css">
+  <link rel="stylesheet" href="_base/css/siderbar.css">
+  <link rel="stylesheet" href="_base/css/nav.css">
+  <link rel="stylesheet" href="_base/css/scrollbar.css">
 </head>
 
 <body>
@@ -115,168 +119,6 @@
   <script src="_base/js/prism-css.min.js"></script>
   <!-- <script src="_base/js/prism-toml.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/@alertbox/docsify-footer@1.0.0-0/dist/docsify-footer.min.js"></script>
-  <style>
-    /* sidebar-toggle */
-    .sidebar-toggle {
-      width: 30px;
-      height: 100px;
-      position: relative;
-      top: calc(100vh/2 - 100px);
-      left: 300px;
-      transition: transform .25s ease-out;
-      background: transparent;
-    }
-
-    .sidebar-toggle span:first-child {
-      display: block;
-      width: 5px;
-      height: 15px;
-      background-color: #ccc;
-      transition: transform 0.1s ease;
-      /* 添加过渡效果 */
-      border-radius: 100px;
-      transform: translateY(5px) rotate(0deg) translateZ(0px);
-    }
-
-    .sidebar-toggle span:last-child {
-      display: block;
-      width: 5px;
-      height: 15px;
-      background-color: #ccc;
-      transition: transform 0.1s ease;
-      /* 添加过渡效果 */
-      border-radius: 100px;
-      transform: translateY(-5px) rotate(0deg) translateZ(0px);
-    }
-
-    .sidebar-toggle:hover span:first-child {
-      transform: translateY(4px) rotate(20deg) translateZ(0px);
-      background-color: var(--theme-color, #42b983);
-    }
-
-    .sidebar-toggle:hover span:last-child {
-      transform: translateY(-4px) rotate(-20deg) translateZ(0px);
-      background-color: var(--theme-color, #42b983);
-    }
-
-    .sidebar-toggle span {
-      display: none;
-    }
-
-    body.close .sidebar-toggle {
-      transform: translateX(-300px);
-    }
-
-    body.close .sidebar-toggle:hover span:first-child {
-      transform: translateY(4px) rotate(-20deg) translateZ(0px);
-      background-color: var(--theme-color, #42b983);
-    }
-
-    body.close .sidebar-toggle:hover span:last-child {
-      transform: translateY(-4px) rotate(20deg) translateZ(0px);
-      background-color: var(--theme-color, #42b983);
-    }
-
-    /* nav */
-    .nav {
-      position: fixed;
-      right: 0px;
-      z-index: 9999;
-    }
-
-    .nav .page_toc {
-      display: none;
-      font-size: small;
-    }
-
-    body.close .nav {
-      width: var(--toc-width, 200px);
-    }
-
-    body.close .nav .page_toc {
-      display: block;
-    }
-
-    /* 关闭侧边导航栏，同时隐藏顶部导航 */
-    body.close .app-nav {
-      display: none;
-    }
-
-    .app-nav {
-      position: fixed;
-      filter: blur(0.45px) opacity(0.6);
-    }
-
-    .app-nav a {
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .app-name-link {
-      font-size: 20px;
-      font-weight: bold;
-      width: 100%;
-      display: block;
-      /* text-align: right; */
-      /* padding-right: 20%; */
-      font-family: '楷体', '楷体_GB2312', '华文楷体';
-      font-size: 24px;
-    }
-
-    .sidebar ul,
-    .sidebar ul li {
-      font-weight: bold;
-      color: #42b983;
-    }
-
-    .sidebar ul li a {
-      font-weight: 500;
-      padding-right: 4px;
-      color: #545454;
-      letter-spacing: 0.4px;
-      font-size: 14px;
-      filter: blur(0.35px) opacity(0.85);
-    }
-
-    .sidebar ul li.active>a {
-      font-weight: 700;
-      filter: blur(0px) opacity(1);
-    }
-
-    .sidebar {
-      background: #f6f8fa;
-      padding-top: 24px;
-      /* direction: rtl; */
-      /* text-align: center; */
-      backdrop-filter: blur(100px);
-    }
-
-    /* markdown-section */
-    .markdown-section {
-      height: 100vh;
-      max-width: 90% !important;
-    }
-
-    body.close .markdown-section {
-      max-width: 96% !important;
-      padding: 0px;
-      margin: 0px;
-    }
-
-    /* 滚动条 */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      display: none;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 2px;
-      background-color: #cccedb;
-    }
-  </style>
 </body>
 
 </html>

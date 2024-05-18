@@ -1,0 +1,51 @@
+/* nav */
+.nav {
+    position: fixed;
+    right: 0px;
+    z-index: 9999;
+}
+
+.nav .page_toc {
+    display: none;
+    font-size: small;
+}
+
+body.close .nav {
+    width: var(--toc-width, 200px);
+}
+
+body.close .nav .page_toc {
+    display: block;
+}
+
+/* 关闭侧边导航栏，同时隐藏顶部导航 */
+body.close .app-nav {
+    display: none;
+}
+
+/* .app-nav {
+    position: fixed;
+    filter: blur(0.45px) opacity(0.6);
+} */
+
+.app-nav a {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.app-name-link {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    /* text-align: right; */
+    /* padding-right: 20%; */
+    font-family: '楷体', '楷体_GB2312', '华文楷体';
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    body .app-nav {
+        display: none;
+    }
+}
