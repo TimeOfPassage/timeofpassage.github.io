@@ -23,11 +23,6 @@ body.close .app-nav {
     display: none;
 }
 
-/* .app-nav {
-    position: fixed;
-    filter: blur(0.45px) opacity(0.6);
-} */
-
 .app-nav a {
     font-size: 12px;
     font-weight: bold;

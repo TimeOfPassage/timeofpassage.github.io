@@ -6,3 +6,4 @@
 - [并行测试](/计算机时代/无限Python/6.并行测试.md)
 - [request通过代理请求](/计算机时代/无限Python/7.request通过代理请求.md)
 - [SSH自动化](/计算机时代/无限Python/8.SSH自动化.md)
+- [pip switch mirror](/计算机时代/无限Python/9.pip切源.md)
