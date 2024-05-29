@@ -5,3 +5,4 @@
 - [UniApp-iconfont使用](/计算机时代/前端系列/5.UniApp-iconfont使用.md)
 - [Vite-前端构建工具](/计算机时代/前端系列/6.Vite-前端构建工具.md)
 - [Vue-VueElementAdmin优化加载](/计算机时代/前端系列/7.Vue-VueElementAdmin优化加载.md)
+- [快速创建Electron项目](/计算机时代/前端系列/8.快速创建Electron项目.md)
