@@ -3,5 +3,6 @@
 - [Nacos注册容器IP问题](/计算机时代/Docker万物生/3.Nacos注册容器IP问题.md)
 - [Nginx](/计算机时代/Docker万物生/4.Nginx.md)
 - [Nginx增加基础鉴权](/计算机时代/Docker万物生/5.Nginx增加基础鉴权.md)
-- [Redis](/计算机时代/Docker万物生/6.Redis.md)
+- [Redis基本使用](/计算机时代/Docker万物生/6.Redis基本使用.md)
 - [离线机器安装docker容器](/计算机时代/Docker万物生/7.离线机器安装docker容器.md)
+- [Redis信息获取](/计算机时代/Docker万物生/6-1.Redis信息获取.md)
