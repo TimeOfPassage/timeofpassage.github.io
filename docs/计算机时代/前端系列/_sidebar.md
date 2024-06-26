@@ -10,3 +10,4 @@
 - [NPM切源](/计算机时代/前端系列/10.NPM切源.md)
 - [Electron设置托盘图标信息](/计算机时代/前端系列/11.Electron设置托盘图标信息.md)
 - [Electron设置注册快捷键信息](/计算机时代/前端系列/12.Electron设置注册快捷键信息.md)
+- [macOS下的screenCapture命令](/计算机时代/前端系列/13.macOS下的screenCapture命令.md)
