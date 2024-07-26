@@ -5,3 +5,4 @@
 - [Linux系统注册Jenkins服务](/计算机时代/服务器/5.Linux系统注册Jenkins服务.md)
 - [Shell脚本模板](/计算机时代/服务器/6.Shell脚本模板.md)
 - [Ubuntu下的批量IP限制](/计算机时代/服务器/7.Ubuntu下的批量IP限制.md)
+- [Ubuntu挂载Nas操作](/计算机时代/服务器/8.Ubuntu挂载Nas操作.md)
