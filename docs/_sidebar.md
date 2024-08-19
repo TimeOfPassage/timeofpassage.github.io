@@ -15,7 +15,7 @@
   - [诗词 - 诗酒田园](/生活漫谈/诗词/1.定风波.md)
   - [音乐 - 人类悲欢](/生活漫谈/音乐/1.漠河舞厅.md)
   - [出去走走 - 自由的向往](/生活漫谈/出去走走/1.二〇一九-一人游.md)
-- 从零开始的英语
+<!-- - 从零开始的英语
   - [第一天 - 头大](/从零开始的英语/1.abbreviation-abnormal-ability.md)
   - [第二天 - 一个头两个大](/从零开始的英语/2.sunburn-showcase-after-graduation.md)
-  - [第三天 - 无头](/从零开始的英语/3.mutate-assumes-lake.md)
+  - [第三天 - 无头](/从零开始的英语/3.mutate-assumes-lake.md) -->
