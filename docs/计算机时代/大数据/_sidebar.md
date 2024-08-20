@@ -1,3 +1,3 @@
-- [Flink-SQL同步示例](/计算机时代/大数据/1.Flink-SQL同步示例.md)
-- [Hadoop搭建细节](/计算机时代/大数据/2.Hadoop搭建细节.md)
-- [MySQL-FlinkCDC-Doris](/计算机时代/大数据/3.MySQL-FlinkCDC-Doris.md)
+- [1. Flink SQL同步示例](/计算机时代/大数据/1.Flink-SQL同步示例.md)
+- [2. Hadoop搭建细节](/计算机时代/大数据/2.Hadoop搭建细节.md)
+- [3. MySQL Flink CDC Doris](/计算机时代/大数据/3.MySQL-FlinkCDC-Doris.md)
