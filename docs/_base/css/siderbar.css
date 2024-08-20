@@ -1,6 +1,5 @@
 /* 当屏幕宽度小于 768px */
 @media (min-width: 768px) {
-
     /* sidebar-toggle */
     body .sidebar-toggle {
         width: 30px;
@@ -65,7 +64,6 @@
 
 .sidebar ul {
     margin: 0px;
-    /* padding-right: 12px; */
     font-weight: bold;
     color: #42b983;
 }

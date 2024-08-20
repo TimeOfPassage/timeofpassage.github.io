@@ -7,14 +7,31 @@
   flex: 1 1 0%;
   margin: 0 48px;
 }
+
 .nav {
   width: var(--toc-width, 200px);
   align-self: flex-start;
   flex: 0 0 auto;
+  position: fixed;
+  right: 0px;
+  z-index: 9999; 
 }
+
+.nav .page_toc {
+    display: none;
+    font-size: small;
+}
+body.close .nav {
+  width: var(--toc-width, 200px);
+  position: relative;
+}
+body.close .nav .page_toc {
+  display: block;
+}
+
 aside.nav.nothing {
   width: 0;
-}
+} 
 
 .page_toc {
   position: fixed;
