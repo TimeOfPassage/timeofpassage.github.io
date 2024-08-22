@@ -7,3 +7,5 @@
 - [7. Ubuntu下的批量IP限制](/计算机时代/服务器/7.Ubuntu下的批量IP限制.md)
 - [8. Ubuntu挂载Nas操作](/计算机时代/服务器/8.Ubuntu挂载Nas操作.md)
 - [9. 中间服务器转发](/计算机时代/服务器/9.中间服务器转发.md)
+- [10. Ubuntu22安装Python3](/计算机时代/服务器/10.Ubuntu22安装Python3.md)
+- [11. Ubuntu22静态IP设置](/计算机时代/服务器/11.Ubuntu22静态IP设置.md)
